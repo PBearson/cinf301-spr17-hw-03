@@ -24,14 +24,24 @@ class ParseArg
 			if($val[0] == "-" and $val[1] != "-")
 			{
 				//A single-dash that is self-contained
+				//Example: '-v'
 				if($a[$i + 1] == null or $a[$i + 1][0] == "-")
 				{
 					$args[$val[1]] = 'true';
 				}
+				
 				//A single dash followed by a string
+				//Example: -T 4
 				else if(!strpos($a[$i + 1], ','))
 				{
 					$args[$val[1]] = $a[$i + 1];
+				}
+				
+				//A single dash followed by an array list of values
+				//Example: -l Bryan,Kim,Austin
+				else 
+				{
+					
 				}
 			}
 		}
