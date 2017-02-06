@@ -28,6 +28,11 @@ class ParseArg
 				{
 					$args[$val[1]] = 'true';
 				}
+				//A single dash followed by a string
+				else if(!strpos($a[$i + 1], ','))
+				{
+					$args[$val[1]] = $a[$i + 1];
+				}
 			}
 		}
 		return $args;
