@@ -1,9 +1,7 @@
 <?php
 class ParseArg
-{
-	public $argv;
-
-	public function __construct()
+{	
+	public function __construct($args)
 	{
 		$this->argv = $_SERVER['argv'];
 		$this->parse();

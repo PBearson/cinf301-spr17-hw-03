@@ -1,7 +1,10 @@
 <?php
 require_once "./ParseArg.php";
 
-$parsed = new ParseArg();
+$parsed = new ParseArg($argv);
 $arguments = $parsed->argv;
 
-var_dump($arguments);
+foreach($arguments as $args)
+{
+	print($args . "\n");
+};
