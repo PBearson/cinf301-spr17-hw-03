@@ -1,5 +1,5 @@
 <?php
-class ParseArgv
+class ParseArg
 
 {
 	private $argsParsed;
