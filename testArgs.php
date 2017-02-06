@@ -4,7 +4,7 @@ require_once "./ParseArg.php";
 $parsed = new ParseArg($argv);
 $arguments = $parsed->argv;
 
-foreach($arguments as $args)
+foreach($arguments as $args=>$val)
 {
-	print($args . "\n");
+	print($val . "\n");
 };

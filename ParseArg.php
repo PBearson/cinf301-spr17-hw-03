@@ -3,12 +3,24 @@ class ParseArg
 {	
 	public function __construct($args)
 	{
-		$this->argv = $_SERVER['argv'];
-		$this->parse();
+		$arg = $_SERVER['argv'];
+		$this->argv = $this->parse($arg);
 	}
 	
-	private function parse()
+	
+	 /**
+	  * Parse a specified array
+	  * @param unknown $arg
+	  * @return unknown[]
+	  */
+	private function parse($arg)
 	{
-		
+		$args = array();
+		$i = 0;
+		for($i=0; $i < count($arg); $i++)
+		{
+			$args[$i] = $arg[$i];
+		}
+		return $args;
 	}
 }
