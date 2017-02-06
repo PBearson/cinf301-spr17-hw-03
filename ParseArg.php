@@ -1,6 +1,6 @@
 <?php
+class ParseArgv
 
-class ParseArg
 {
 	private $argsParsed;
 	private $argsUnparsed;
@@ -8,11 +8,17 @@ class ParseArg
 	public function __construct()
 	{
 		$this->argsUnparsed = $_SERVER['argv'];
+
 		$this->argsParsed = array
 		(
 				"One" => "one",
 				"Two" => "two",
 				"Three" => "three"
+		);
+				
+		$this->argsParsed = array(
+				"One" => "one",
+				"Two" => "two"
 		);
 	}
 
