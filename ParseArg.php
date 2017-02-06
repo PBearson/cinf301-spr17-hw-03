@@ -12,6 +12,7 @@ class ParseArg
 		(
 				"One" => "one",
 				"Two" => "two",
+				"Three" => "three"
 		);
 	}
 
