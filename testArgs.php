@@ -2,9 +2,6 @@
 require_once "./ParseArg.php";
 
 $parsed = new ParseArg();
-$arguments = $parsed->getParsed();
-// want   $arguments = $parsed->argv;  instead
+$arguments = $parsed->argv;
 
-foreach ($arguments as $k => $v) {
-	print("$k=>$v\n");
-}
+var_dump($arguments);

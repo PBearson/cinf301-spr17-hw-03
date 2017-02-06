@@ -1,29 +1,16 @@
 <?php
 class ParseArg
-
 {
-	private $argsParsed;
-	private $argsUnparsed;
+	public $argv;
 
 	public function __construct()
 	{
-		$this->argsUnparsed = $_SERVER['argv'];
-
-		$this->argsParsed = array
-		(
-				"One" => "one",
-				"Two" => "two",
-				"Three" => "three"
-		);
-				
-		$this->argsParsed = array(
-				"One" => "one",
-				"Two" => "two"
-		);
+		$this->argv = $_SERVER['argv'];
+		$this->parse();
 	}
-
-	public function getParsed()
+	
+	private function parse()
 	{
-		return $this->argsParsed;
+		
 	}
 }
